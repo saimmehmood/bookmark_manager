@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Icons</title>
+</head>
+<body>
+  <canvas id="canvas" width="128" height="128" style="display: none;"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Draw the icon
+    function drawIcon(size) {
+      ctx.clearRect(0, 0, size, size);
+      
+      // Draw background
+      ctx.fillStyle = '#1a73e8';
+      ctx.beginPath();
+      ctx.roundRect(size * 0.1875, size * 0.0625, size * 0.625, size * 0.875, size * 0.0625);
+      ctx.fill();
+      
+      // Draw bookmark fold
+      ctx.fillStyle = 'white';
+      ctx.beginPath();
+      ctx.moveTo(size * 0.34375, size * 0.0625);
+      ctx.lineTo(size * 0.65625, size * 0.0625);
+      ctx.lineTo(size * 0.65625, size * 0.6875);
+      ctx.lineTo(size * 0.5, size * 0.53125);
+      ctx.lineTo(size * 0.34375, size * 0.6875);
+      ctx.closePath();
+      ctx.fill();
+    }
+    
+    // Generate icons in different sizes
+    const sizes = [16, 48, 128];
+    sizes.forEach(size => {
+      drawIcon(size);
+      const link = document.createElement('a');
+      link.download = `icon${size}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+  </script>
+</body>
+</html> 
