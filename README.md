@@ -2,6 +2,7 @@
 Chrome extension for organizing your bookmarks by year and month
 
 ### installation instructions
+- Download or clone all the files in a folder
 - Open Chrome and go to chrome://extensions/
 - Enable "Developer mode" in top right
 - Click "Load unpacked" and select your extension directory
