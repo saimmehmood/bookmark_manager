@@ -19,22 +19,65 @@ h1 {
 
 .controls {
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.view-controls {
+  display: flex;
   gap: 8px;
+}
+
+.topic-selector {
+  margin-top: 4px;
 }
 
 button {
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  background-color: #1a73e8;
-  color: white;
+  background-color: #f1f3f4;
+  color: #202124;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 button:hover {
+  background-color: #e8eaed;
+}
+
+button.active {
+  background-color: #1a73e8;
+  color: white;
+}
+
+button.active:hover {
   background-color: #1557b0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  background-color: white;
+  color: #202124;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+
+select:hover {
+  border-color: #1a73e8;
 }
 
 #bookmarksContainer {
@@ -42,23 +85,23 @@ button:hover {
   overflow-y: auto;
 }
 
-.year-section {
+.year-section, .topic-section {
   margin-bottom: 16px;
 }
 
-.year-header {
+.year-header, .topic-header {
   font-size: 18px;
   font-weight: 600;
   color: #202124;
   margin-bottom: 8px;
 }
 
-.month-section {
+.month-section, .subtopic-section {
   margin-left: 16px;
   margin-bottom: 12px;
 }
 
-.month-header {
+.month-header, .subtopic-header {
   font-size: 16px;
   font-weight: 500;
   color: #5f6368;

@@ -7,3 +7,6 @@ Chrome extension for organizing your bookmarks by year and month
 - Enable "Developer mode" in top right
 - Click "Load unpacked" and select your extension directory
 - the extension should now appear with the new bookmark icon
+
+### Update
+- added topic organization and the functionality to choose between different topics
