@@ -1,5 +1,5 @@
 # bookmark_manager
-Chrome extension for organizing your bookmarks by year and month
+Chrome extension for organizing your bookmarks by year, month and topic
 
 ### installation instructions
 - Download or clone all the files in a folder
